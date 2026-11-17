@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="100%" height="100%">
+  <defs>
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e0a1f"/>
+      <stop offset="50%" stop-color="#140d2b"/>
+      <stop offset="100%" stop-color="#0a0614"/>
+    </linearGradient>
+
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2e1065"/>
+      <stop offset="60%" stop-color="#7e22ce"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="waveArea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3b0764" stop-opacity="0.0"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Container Box -->
+  <rect x="2" y="2" width="996" height="276" rx="14" fill="url(#panelBg)" stroke="#3b1d60" stroke-width="1.5"/>
+
+  <!-- Top Terminal Header Bar -->
+  <line x1="2" y1="48" x2="998" y2="48" stroke="#241242" stroke-width="1.2"/>
+  <circle cx="28" cy="25" r="5" fill="#a855f7" filter="url(#glow)"/>
+  <circle cx="46" cy="25" r="5" fill="#6d28d9"/>
+  <circle cx="64" cy="25" r="5" fill="#3b0764"/>
+
+  <text x="90" y="29" fill="#e9d5ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Fira Code', monospace" font-size="12" font-weight="600" letter-spacing="2">SYSTEM TELEMETRY // AI &amp; DISTRIBUTED PIPELINES</text>
+  <rect x="850" y="16" width="125" height="20" rx="10" fill="#1b0e36" stroke="#6d28d9" stroke-width="1"/>
+  <circle cx="864" cy="26" r="3.5" fill="#10b981"/>
+  <text x="876" y="29" fill="#a7f3d0" font-family="monospace" font-size="10" font-weight="600">LIVE ENGINE</text>
+
+  <!-- Left Stats Sub-Cards -->
+  <!-- Card 1 -->
+  <rect x="25" y="66" width="280" height="56" rx="8" fill="#120b24" stroke="#2a1447" stroke-width="1"/>
+  <text x="40" y="88" fill="#a78bfa" font-family="monospace" font-size="10" letter-spacing="1.5">NEURAL ACCELERATION</text>
+  <text x="40" y="110" fill="#f5f3ff" font-family="sans-serif" font-size="15" font-weight="700">2.28% MAPE <tspan fill="#c084fc" font-size="12" font-weight="500">• 1.14x LLVM -O3</tspan></text>
+
+  <!-- Card 2 -->
+  <rect x="25" y="132" width="280" height="56" rx="8" fill="#120b24" stroke="#2a1447" stroke-width="1"/>
+  <text x="40" y="154" fill="#a78bfa" font-family="monospace" font-size="10" letter-spacing="1.5">VERIFICATION FIDELITY</text>
+  <text x="40" y="176" fill="#f5f3ff" font-family="sans-serif" font-size="15" font-weight="700">100% Deterministic <tspan fill="#c084fc" font-size="12" font-weight="500">• Invariant Inviolable</tspan></text>
+
+  <!-- Card 3 -->
+  <rect x="25" y="198" width="280" height="56" rx="8" fill="#120b24" stroke="#2a1447" stroke-width="1"/>
+  <text x="40" y="220" fill="#a78bfa" font-family="monospace" font-size="10" letter-spacing="1.5">HIGH CONCURRENCY</text>
+  <text x="40" y="242" fill="#f5f3ff" font-family="sans-serif" font-size="15" font-weight="700">Sub-Second Priority <tspan fill="#c084fc" font-size="12" font-weight="500">• BullMQ + Redis</tspan></text>
+
+  <!-- Divider between Cards and Chart -->
+  <line x1="330" y1="66" x2="330" y2="254" stroke="#241242" stroke-width="1.2"/>
+
+  <!-- Right Chart Area (Inspired by Reference 2) -->
+  <g transform="translate(350, 66)">
+    <!-- Chart Grid Lines -->
+    <line x1="0" y1="30" x2="620" y2="30" stroke="#1d1033" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="0" y1="75" x2="620" y2="75" stroke="#1d1033" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="0" y1="120" x2="620" y2="120" stroke="#1d1033" stroke-width="1" stroke-dasharray="4"/>
+    <line x1="0" y1="165" x2="620" y2="165" stroke="#241242" stroke-width="1.2"/>
+
+    <!-- Dynamic Activity Bars -->
+    <g opacity="0.85">
+      <rect x="30" y="110" width="12" height="55" rx="3" fill="url(#barGrad)"/>
+      <rect x="55" y="85" width="12" height="80" rx="3" fill="url(#barGrad)"/>
+      <rect x="80" y="60" width="12" height="105" rx="3" fill="url(#barGrad)"/>
+      <rect x="105" y="95" width="12" height="70" rx="3" fill="url(#barGrad)"/>
+      <rect x="130" y="45" width="12" height="120" rx="3" fill="url(#barGrad)"/>
+      <rect x="155" y="70" width="12" height="95" rx="3" fill="url(#barGrad)"/>
+      <rect x="180" y="40" width="12" height="125" rx="3" fill="url(#barGrad)"/>
+      <rect x="205" y="55" width="12" height="110" rx="3" fill="url(#barGrad)"/>
+      <rect x="230" y="30" width="12" height="135" rx="3" fill="url(#barGrad)"/>
+      <rect x="255" y="65" width="12" height="100" rx="3" fill="url(#barGrad)"/>
+    </g>
+
+    <!-- Glowing Continuous Wave Overlay (Wave 1) -->
+    <path d="M 0,140 Q 60,30 140,85 T 280,50 T 420,110 T 540,40 T 620,70 L 620,165 L 0,165 Z" fill="url(#waveArea)"/>
+    <path d="M 0,140 Q 60,30 140,85 T 280,50 T 420,110 T 540,40 T 620,70" fill="none" stroke="url(#neonPurple)" stroke-width="2.5" filter="url(#glow)"/>
+
+    <!-- Wave 2 (Secondary Harmonizer) -->
+    <path d="M 0,155 Q 70,120 150,135 T 300,90 T 440,70 T 550,115 T 620,95" fill="none" stroke="#6d28d9" stroke-width="1.8" opacity="0.75"/>
+
+    <!-- Active Pulse Dots -->
+    <circle cx="140" cy="85" r="4" fill="#ffffff" filter="url(#glow)"/>
+    <circle cx="280" cy="50" r="4" fill="#ffffff" filter="url(#glow)"/>
+    <circle cx="420" cy="110" r="4" fill="#ffffff" filter="url(#glow)"/>
+    <circle cx="540" cy="40" r="4.5" fill="#f5f3ff" filter="url(#glow)"/>
+
+    <!-- Sub labels -->
+    <text x="30" y="182" fill="#715298" font-family="monospace" font-size="9">T-POLYHEDRAL</text>
+    <text x="140" y="182" fill="#715298" font-family="monospace" font-size="9">EVIDENCE-AI</text>
+    <text x="280" y="182" fill="#715298" font-family="monospace" font-size="9">INVARIANT-ENG</text>
+    <text x="420" y="182" fill="#715298" font-family="monospace" font-size="9">TELEMETRY-5G</text>
+    <text x="540" y="182" fill="#715298" font-family="monospace" font-size="9">DISTRIBUTED</text>
+  </g>
+</svg>
